@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+
+    android:gravity="center"
+    android:textSize="20sp"
+    android:paddingStart="@dimen/top_margin"
+    android:paddingEnd="@dimen/top_margin"
+
+    android:layout_marginEnd="@dimen/top_margin"
+
+    android:background="@drawable/radio_button_background"
+    android:textColor="@drawable/radio_button_text_color"
+
+    >  <!--@drawable/radio_button_background-->
+</TextView>

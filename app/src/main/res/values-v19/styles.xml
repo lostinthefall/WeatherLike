@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/main_orange</item>
+        <item name="colorPrimaryDark">@color/main_orange</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="@style/BaseTheme">
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <!--   -->
+</resources>

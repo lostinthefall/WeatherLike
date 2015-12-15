@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">WeatherLike</string>
+    <string name="action_introduction">说明</string>
+    <string name="city_name">城市</string>
+    <string name="today_weather">今天天气</string>
+    <string name="temperature">温度</string>
+    <string name="astro">我的星座</string>
+    <string name="xxastro">星座</string>
+    <string name="luck">-请点击选择-你的星座</string>
+    <string name="zonghe_yun">综合运：</string>
+    <string name="caifu_yun">财富运：</string>
+    <string name="shiye_yun">事业运：</string>
+    <string name="aiqing_yun">爱情运：</string>
+    <string name="xing">星</string>
+    <string name="choose_your_place">请选择你的地区</string>
+    <string name="finish">完成</string>
+    <string name="choose_city">请选择你的地区</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="title_activity_introduce_container">说明</string>
+    <string name="city_list_string"></string>
+
+</resources>

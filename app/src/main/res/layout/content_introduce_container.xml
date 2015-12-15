@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.atozmak.weatherlike.Introduce_container"
+    tools:showIn="@layout/activity_introduce_container"
+    >
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/main_orange"
+        android:text="注：本软件为个人demo，非商用。"
+        android:textColor="@color/main_white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/introduction_textView"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用说明：\n   1.按下【首页】右上角的【更新】按钮会更新天气数据和星座数据。\n   2.按下【首页】右上方的【添加（十字架）】按钮会显示城市列表供您选择。\n   3.长按【首页】中【城市的名字】可删除不想要的城市。\n   4.点击【首页】中间右方的【请点击选择】可选择您的星座。\n   5.就这么多了，谢谢你来过这里。"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/image_view_thank_you"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/thank_you"
+
+        />
+</LinearLayout>
