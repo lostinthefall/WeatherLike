@@ -272,6 +272,9 @@ public class DataBaseHelperUtil extends SQLiteOpenHelper {
         Map<String, String> a = now_list_adapter.get(position);
         Map<String, String> b = future_list_adapter.get(position);
 
+        /**
+         * 这步很关键，每次都创建实例。
+         */
         ViewPagerFragments viewPagerFragments = new ViewPagerFragments();
         //  Log.v("makdebug", "b      " + b);
         /**

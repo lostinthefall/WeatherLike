@@ -186,7 +186,8 @@ public class GetCityJsonDataThread extends Thread {
 //----------------------分隔符----------------------
 
     /**
-     * 解析网络传回来的 未来天气情况json数据
+     * 解析网络传回来的
+     * 未来天气情况json数据
      *
      * @param json json数据
      */

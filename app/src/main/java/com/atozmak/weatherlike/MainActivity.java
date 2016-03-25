@@ -169,21 +169,26 @@ public class MainActivity extends AppCompatActivity {
 
         while (cursor.moveToNext()) {
             /**
-             * city在数据库的位置为1
+             * city_name在数据库的位置为1
              */
             city_name_from_net = cursor.getString(1);
+            /**
+             * 【mTrack】的控件就是【HorizontalScrollView】中的【LinearLayout】。
+             */
             child = (TextView) LayoutInflater.from(this).inflate(R.layout.radio_button, mTrack, false);
-
             child.setId(int_id);
-            Log.v("makdebug", "SingleClick  int_id  " + int_id);
+            // Log.v("makdebug", "SingleClick  int_id  " + int_id);
             child.setText(city_name_from_net);
             //  data_base_city_name_map.put(int_id+"",city_name_from_net);
+            /**
+             * 【data_base_city_name_list】是一个【List】
+             */
             data_base_city_name_list.add(city_name_from_net);
+
             child.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.v("makdebug", "SingleClick  child  " + String.valueOf(child));
-
+                    // Log.v("makdebug", "SingleClick  child  " + String.valueOf(child));
                     id_vGetId = v.getId();
 //                    Log.v("makdebug", "SingleClick  id_vGetId  " + id_vGetId);
 //                    Log.v("makdebug", "SingleClick  listFragments  " + listFragments.size());
@@ -222,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 /**
-                 * 不做事
+                 * do nothing
                  */
             }
         });
@@ -246,12 +251,12 @@ public class MainActivity extends AppCompatActivity {
                 db.delete("weather_info", "now_city_name='" + city_name_from_net + "'", null);
 
                 //   Log.v("makdebug", "LongClick--- " + city_name_from_net);
-
                 /**
                  * 做不到一个一个的删除，只能全部删除之后从新加载了。
                  * 下个版本在弄吧。
                  */
-                viewPager.removeAllViews();
+                restartAll();
+                /*viewPager.removeAllViews();
                 mTrack.removeAllViews();
                 listFragments.clear();
                 myFragmentPagerAdapter.notifyDataSetChanged();
@@ -259,7 +264,7 @@ public class MainActivity extends AppCompatActivity {
                 initImageButton();
                 initGetDataFromSQLite();
                 initIndicator();
-                initFragment();
+                initFragment();*/
             }
         });
     }
@@ -271,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void initFragment() {
         int num = dbUtil.getCountFromDatabase();
-        Log.v("makdebug", " initFragment()添加了新城市之后database里有多少行 " + num);
+        //Log.v("makdebug", " initFragment()添加了新城市之后database里有多少行 " + num);
 
         for (int i = 0; i < num; i++) {
             dbUtil.setFragmentArguments(i);
@@ -280,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
                 = new MyFragmentPagerAdapter(context, getSupportFragmentManager(), dbUtil, listFragments);
         viewPager.setAdapter(myFragmentPagerAdapter);
 
-        Log.v("makdebug", "initFragment--listFragments.size--" + listFragments.size());
+        // Log.v("makdebug", "initFragment--listFragments.size--" + listFragments.size());
 
     }
 
@@ -558,6 +563,18 @@ public class MainActivity extends AppCompatActivity {
         initGetDataFromSQLite();
         initIndicator();
         initFragment();
+        /*
+        *       viewPager.removeAllViews();
+                mTrack.removeAllViews();
+                listFragments.clear();
+                myFragmentPagerAdapter.notifyDataSetChanged();
+                initFindViewById();
+                initImageButton();
+                initGetDataFromSQLite();
+                initIndicator();
+                initFragment();
+        *
+        * */
     }
 
 

@@ -193,6 +193,12 @@ public class TanmuMainAcitivity extends Fragment {
         public void run() {
             int N = tanmuBean.getItems().length;
             for (int i = 0; i < N; i++) {
+                /**
+                 * public final Message obtainMessage (int what, int arg1, int arg2)
+                 * what	Value to assign to the returned Message.what field.
+                   arg1	Value to assign to the returned Message.arg1 field.
+                   arg2	Value to assign to the returned Message.arg2 field.
+                 */
                 handler.obtainMessage(1, i, 0).sendToTarget();
                 SystemClock.sleep(500);
                 //Log.v("makdebug", "tanmu---" + i);

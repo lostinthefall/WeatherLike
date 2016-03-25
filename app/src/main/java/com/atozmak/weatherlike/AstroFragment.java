@@ -97,7 +97,7 @@ public class AstroFragment extends Fragment {
         tv_choose_astro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v("makdebug", "AlertDialog.Builder test1");
+               // Log.v("makdebug", "AlertDialog.Builder test1");
                 AlertDialog.Builder builder = new AlertDialog.Builder(AstroFragment.this.getActivity())
                         .setTitle("我的星座")
                         .setSingleChoiceItems(astros_chn, 0, new DialogInterface.OnClickListener() {
@@ -136,7 +136,7 @@ public class AstroFragment extends Fragment {
                                 }
                         );
                 builder.show();
-                Log.v("makdebug", "AlertDialog.Builder test2");
+              //  Log.v("makdebug", "AlertDialog.Builder test2");
             }
         });
         return view;
